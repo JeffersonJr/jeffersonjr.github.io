@@ -1,0 +1,595 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{
+    display:block
+}
+audio,canvas,video{
+    display:inline-block;
+    *display:inline;
+    *zoom:1
+}
+audio:not([controls]){
+    display:none;
+    height:0
+}
+[hidden]{
+    display:none
+}
+html{
+    font-size:100%;
+    overflow-y:scroll;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased
+}
+body{
+    margin:0
+}
+a:focus{
+    outline:thin dotted
+}
+a:hover,a:active{
+    outline:0
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0
+}
+abbr[title]{
+    border-bottom:1px dotted
+}
+b,strong{
+    font-weight:bold
+}
+blockquote{
+    font-family:Georgia,"Times New Roman",Times,serif
+}
+dfn{
+    font-style:italic
+}
+mark{
+    background:#ff0;
+    color:#000
+}
+p,pre{
+    margin:0
+}
+pre,code,kbd,samp{
+    font-family:monospace,serif;
+    _font-family:'courier new',monospace;
+    font-size:1em
+}
+pre{
+    white-space:pre;
+    white-space:pre-wrap;
+    word-wrap:break-word
+}
+q{
+    quotes:none
+}
+q:before,q:after{
+    content:'';
+    content:none
+}
+small{
+    font-size:80%
+}
+sub,sup{
+    font-size:75%;
+    line-height:0;
+    position:relative;
+    vertical-align:baseline
+}
+sup{
+    top:-.5em
+}
+sub{
+    bottom:-.25em
+}
+dl,ol,ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    list-style-image:none
+}
+form{
+    margin:0
+}
+fieldset{
+    border:1px solid silver;
+    margin:0 2px;
+    padding:.35em .625em .75em
+}
+legend{
+    border:0;
+    padding:0;
+    white-space:normal;
+    *margin-left:-7px
+}
+select{
+    max-width:100%
+}
+button,input,select,textarea{
+    font-size:100%;
+    margin:0;
+    vertical-align:baseline;
+    *vertical-align:middle;
+    font-family:sans-serif
+}
+button,input{
+    line-height:normal
+}
+button,input[type="button"],input[type="reset"],input[type="submit"]{
+    cursor:pointer;
+    -webkit-appearance:button;
+    border-radius:0;
+    *overflow:visible;
+    outline:none
+}
+button[disabled],input[disabled]{
+    cursor:default
+}
+input[type="checkbox"],input[type="radio"]{
+    box-sizing:border-box;
+    padding:0;
+    *height:13px;
+    *width:13px
+}
+input[type="search"]{
+    -webkit-appearance:textfield;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+    box-sizing:content-box
+}
+input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{
+    -webkit-appearance:none
+}
+button::-moz-focus-inner,input::-moz-focus-inner{
+    border:0;
+    padding:0
+}
+textarea{
+    overflow:auto;
+    vertical-align:top
+}
+textarea,input[type="text"],input[type="email"],input[type="password"]{
+    -webkit-appearance:none;
+    border-radius:0;
+    -moz-border-radius:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0
+}
+.wrapper{
+    width:90%;
+    max-width:1280px;
+    -moz-column-gap:3em;
+    -webkit-column-gap:3em;
+    column-gap:3em;
+    -moz-column-count:1;
+    -webkit-column-count:1;
+    column-count:1;
+    margin:auto
+}
+.wrapper .item{
+    display:inline-block;
+    width:100%;
+    margin-top:1em;
+    margin-bottom:1em
+}
+@media screen and (min-width: 0px) and (max-width: 640px){
+    .wrapper{
+        -moz-column-count:1;
+        -webkit-column-count:1;
+        column-count:1
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 800px){
+    .wrapper{
+        -moz-column-count:1;
+        -webkit-column-count:1;
+        column-count:1
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 1280px){
+    .wrapper.two-columns{
+        -moz-column-count:2;
+        -webkit-column-count:2;
+        column-count:2
+    }
+}
+@media screen and (min-width: 1281px){
+    .wrapper.two-columns{
+        -moz-column-count:2;
+        -webkit-column-count:2;
+        column-count:2
+    }
+}
+@media print{
+    .wrapper{
+        clear:both;
+        width:100%
+    }
+    .wrapper.two-columns .item{
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        -moz-background-clip:padding-box !important;
+        -webkit-background-clip:padding-box !important;
+        background-clip:padding-box !important;
+        float:left;
+        width:50%;
+        padding:10px
+    }
+    .wrapper.two-columns .item:nth-child(odd){
+        clear:both
+    }
+}
+html{
+    font-size:62.5%
+}
+body{
+    background-color:#f3f3f3;
+    font-family:"Source Sans Pro", sans-serif;
+    font-size:1.6rem;
+    color:#282828;
+    margin:0
+}
+section{
+    clear:both
+}
+header,footer,main{
+    clear:both
+}
+.hero{
+    padding:4em 0
+}
+.hero .image,.hero .intro{
+    display:inline-block;
+    vertical-align:middle
+}
+.hero .image{
+    text-align:center;
+    max-width:300px;
+    margin-right:30px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    border:10px solid #FFF;
+    overflow:hidden;
+    box-sizing:border-box
+}
+.hero .intro{
+    max-width:900px;
+    font-size:1.8rem;
+    font-weight:300
+}
+.hero .intro h1{
+    font-weight:600;
+    margin-bottom:.2em;
+    margin-top:.2em;
+    line-height:1em;
+    font-size:4rem
+}
+.hero .intro h2{
+    font-size:2.5rem;
+    font-weight:200;
+    font-style:italic;
+    line-height:1.2;
+    margin-bottom:.3em;
+    color:#727272
+}
+.hero .intro h3{
+    display:inline;
+    font-size:1.4rem;
+    font-weight:600;
+    text-transform:lowercase;
+    padding:0 .5em
+}
+.hero .intro .looking-for{
+    margin-top:2em;
+    margin-bottom:0;
+    font-size:1.5rem
+}
+.hero .intro i{
+    margin-right:.1em
+}
+.about{
+    background-color:#FFF;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+    font-size:1.4rem;
+    padding:2em 0
+}
+.about .bio{
+    font-size:1.8rem;
+    font-weight:200
+}
+.about h3{
+    display:inline-block;
+    font-weight:600;
+    padding:0;
+    text-transform:lowercase;
+    margin-bottom:0.5em
+}
+.about .info{
+    margin-bottom:0.25em;
+    display:block
+}
+.about .info .fa{
+    margin-right:0.5em
+}
+.curriculum{
+    padding:2em 0
+}
+.curriculum .container{
+    overflow:hidden
+}
+.curriculum .wrapper{
+    margin-top:-1px;
+    overflow:hidden
+}
+.curriculum h3.title{
+    display:inline-block;
+    font-size:3.6rem;
+    font-weight:200;
+    padding:0 .3em;
+    text-transform:lowercase;
+    margin-bottom:1em
+}
+.curriculum .subtitle{
+    display:inline-block;
+    font-weight:600;
+    font-size:1.3rem;
+    padding:0 .3em;
+    text-transform:lowercase
+}
+.curriculum .item{
+    border-top:1px solid #e2e2e2;
+    padding-top:2em;
+    margin-top:0;
+    page-break-inside:avoid
+}
+.experiences .experience{
+    margin-bottom:2em;
+    display:block;
+    overflow:hidden
+}
+.experiences .image{
+    float:left;
+    clear:left;
+    width:40px;
+    height:40px;
+    overflow:hidden;
+    margin-top:3px;
+    margin-right:10px;
+}
+.experiences .image img{
+    width:100%;
+    height:auto
+}
+.experiences .content{
+    margin-left:60px
+}
+.experiences .content .date{
+    font-size:1.4rem
+}
+.experiences .content .position{
+    font-size:1.8rem;
+    font-weight:600;
+    line-height:2.4rem
+}
+.experiences .content .description{
+    font-size:1.3rem;
+    margin-top:0.5em
+}
+.skills .skill{
+    margin-bottom:1em;
+    display:block;
+    overflow:hidden;
+    font-size:1.8rem;
+    line-height:2.3rem
+}
+.skills .skill .fa{
+    font-size:1.2rem
+}
+.skills .skill .fa.opaque{
+    opacity:.15
+}
+.educations .education{
+    margin-bottom:2em;
+    display:block;
+    overflow:hidden
+}
+.educations .date{
+    font-size:1.4rem;
+    display:inline-block
+}
+.educations .course{
+    font-size:1.8rem;
+    font-weight:600;
+    line-height:2.6rem
+}
+.educations .description{
+    font-size:1.3rem;
+    margin-top:0.5em
+}
+.languages .language{
+    margin-bottom:2em;
+    display:block;
+    overflow:hidden
+}
+.languages .subtitle{
+    font-size:1.6rem
+}
+.languages .language{
+    margin-bottom:2em;
+    display:block;
+    overflow:hidden
+}
+.languages .level{
+    font-size:1.6rem;
+    display:inline-block;
+    font-weight:600
+}
+.languages .certificate{
+    font-size:1.3rem;
+    margin-top:0.5em
+}
+.awards .award{
+    margin-bottom:2em;
+    display:block;
+    overflow:hidden
+}
+.awards .date{
+    font-size:1.4rem;
+    display:inline-block;
+    font-weight:600
+}
+.awards .description{
+    font-size:1.3rem;
+    margin-top:0.5em
+}
+.links .link{
+    margin-bottom:2em;
+    display:block;
+    overflow:hidden
+}
+.links a{
+    text-decoration:none
+}
+.links .name{
+    font-size:1.8rem;
+    font-weight:600;
+    line-height:2.6rem
+}
+.links .description{
+    font-size:1.3rem;
+    margin-top:0.5em
+}
+.share .fa,.share li,.share a{
+    text-align:center;
+    margin:0
+}
+.share a{
+    display:block;
+    float:left;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    background:#3f3736;
+    color:#FFF;
+    text-decoration:none;
+    padding:.2em .8em;
+    margin-right:.6em;
+    font-weight:600;
+    font-size:1.2rem
+}
+.share a i{
+    margin-right:.5em
+}
+@media all and (min-width: 641px){
+    .share a{
+        font-size:1.4rem
+    }
+}
+.share .facebook a{
+    background-color:#3b579d
+}
+.share .twitter a{
+    background-color:#00aced
+}
+.share .linkedin a{
+    background-color:#1683bc
+}
+@media print{
+    html{
+        font-size:50%
+    }
+    body{
+        background-color:transparent
+    }
+    .hero .image{
+        max-width:150px
+    }
+    .curriculum{
+        padding:2em 0
+    }
+    .curriculum .container{
+        overflow:hidden
+    }
+    .curriculum .wrapper{
+        margin-top:-1px;
+        overflow:hidden
+    }
+    .curriculum h3.title{
+        font-size:2.5rem;
+        padding:0 .2em;
+        margin-bottom:1em;
+        position:relative;
+        overflow:hidden
+    }
+    .curriculum h3.title span{
+        position:relative;
+        z-index:1;
+        color:#000
+    }
+    .curriculum h3.title:before{
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        border:99999px solid #eee;
+        z-index:0
+    }
+    .curriculum .subtitle{
+        position:relative;
+        overflow:hidden
+    }
+    .curriculum .subtitle span{
+        position:relative;
+        z-index:1;
+        color:#000
+    }
+    .curriculum .subtitle:before{
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        border:99999px solid #aaa;
+        z-index:0
+    }
+    .experiences .image{
+        width:30px;
+        height:30px;
+        border:1px solid #ccc
+    }
+    .experiences .content{
+        margin-left:40px
+    }
+    section{
+        padding:30px 0 !important
+    }
+    section .wrapper{
+        padding:0;
+        margin:0 !important
+    }
+    section .wrapper .item{
+        padding:30px 0;
+        margin:0 !important;
+        border:0 !important
+    }
+    .about{
+        border-bottom:0
+    }
+    .share{
+        display:none !important
+    }
+}	
