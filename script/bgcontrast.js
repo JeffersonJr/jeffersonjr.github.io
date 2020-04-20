@@ -13,7 +13,7 @@ var bgcontrast; (function() {
 document.write("<span style=\"color:" + bgcontrast + "\">Feito por</span> ");
 
 if (bgcontrast == 'black') {
-    document.write("<img src=\"http://jeffersonjunior.com.br/img/jr.png\" height=\"30\" style=\"vertical-align:middle;\" /> Jefferson Junior");
+    document.write("<img alt=\"logo\" src=\"http://jeffersonjunior.com.br/img/jr.png\" height=\"30\" style=\"vertical-align:middle;\" /> Jefferson Junior");
 } else {
-    document.write("<img src=\"http://jeffersonjunior.com.br/img/jrwhite.png\" height=\"30\" style=\"vertical-align:middle;\" /> Jefferson Junior");
+    document.write("<img alt=\"logo\" src=\"http://jeffersonjunior.com.br/img/jrwhite.png\" height=\"30\" style=\"vertical-align:middle;\" /> Jefferson Junior");
 }
