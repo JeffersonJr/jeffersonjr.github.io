@@ -1,20 +1,20 @@
 @media screen{
     .primary-color.background{
-        background-color:#040404
+        background-color:#040404 
     }
     .primary-color.text{
-        color:#040404
+        color:#040404 
     }
     .primary-color.border{
-        border-color:#040404
+        border-color:#040404 
     }
     .secondary-color.background{
-        background-color:#636363
+        background-color:#636363 
     }
     .secondary-color.text{
-        color:#1e7680
+        color:#1e7680 
     }
     body{
-        background-color:#f1f2f0
+        background-color:#f1f2f0 
     }
 }
