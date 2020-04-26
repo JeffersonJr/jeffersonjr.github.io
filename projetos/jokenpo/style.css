@@ -87,3 +87,15 @@ body {
     margin-top: 20px;
     padding: 20px;
 }
+
+p {
+    text-align: center;
+}
+
+#logo img {
+    max-width: 20px;
+}
+
+a {
+    text-decoration:none;
+}
