@@ -1582,3 +1582,18 @@
 .fa-meanpath:before{
     content:"\f20c"
 }
+.box-whatsapp.right {
+    right: 20px;
+}
+.box-whatsapp.bottom {
+    bottom: 20px;
+}
+.box-whatsapp {
+    position: fixed;
+    bottom: 80px;
+    right: 90px;
+    z-index: 9999;
+    width: 64px;
+    height: 64px;
+    display: block;
+}
