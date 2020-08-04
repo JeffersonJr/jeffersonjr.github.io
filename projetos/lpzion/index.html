@@ -378,29 +378,6 @@
 
     <!-- News contant -->
 
-    <?php
-    $link = "http://www.siscomex.gov.br/exportacao/feed/";
-    //link do arquivo xml
-    $xml = simplexml_load_file($link) -> channel;
-
-    foreach($xml -> item as $item){
-    //faz o loop nas tag com o nome "item"
-    //exibe o valor das tags que estão dentro da tag "item"
-    //utilizamos a função "utf8_decode" para exibir os caracteres corretamente
-    echo "<strong>Título:</strong> "
-    .utf8_decode($item -> title)."<br />";
-    echo "<strong>Link:</strong> "
-    .utf8_decode($item -> link)."<br />";
-    echo "<strong>Descrição:</strong> "
-    .utf8_decode($item -> description)."<br />";
-    echo "<strong>Autor:</strong> "
-    .utf8_decode($item -> author)."<br />";
-    echo "<strong>Data:</strong> "
-    .utf8_decode($item -> pubDate)."<br />";
-    echo "<br />";
-    } //fim do foreach
-    ?>
-
     <div class="services-card-section spad">
         <div class="container">
             <div class="section-title">
@@ -418,7 +395,7 @@
                             <img src="img/card-1.jpg" alt="">
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">foreach($xml -> item as $title)</h2>
+                            <h2 class="post-title">Just a simple blog post</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec
                                 elementum id</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
