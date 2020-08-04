@@ -381,7 +381,7 @@
     <?php
 
 $xml= new DOMDocument;
-$xml->load( "gamefc.xml" ); // Se o XML for externo, troque "gamefc.xml" pelo link
+$xml->load( "http://www.siscomex.gov.br/exportacao/feed/" );
 
     if (!$xml) {
     echo "Erro ao abrir arquivo!";
@@ -395,10 +395,10 @@ $xml->load( "gamefc.xml" ); // Se o XML for externo, troque "gamefc.xml" pelo li
 
     foreach ($ver as $valor) {
     echo "<tr>";
-        echo "<td>" . $valor->Colocacao . "</td>";
-        echo "<td>" . $valor->Premiacao ."</td>";
-        echo "<td>" . $valor->ValorDeMercado ."</td>";
-        echo "<td>" . $valor->Retirada ."</td>";
+        echo "<td>" . $valor->title . "</td>";
+        echo "<td>" . $valor->link ."</td>";
+        echo "<td>" . $valor->description ."</td>";
+        echo "<td>" . $valor->generator ."</td>";
         echo "</tr>";
     }
     echo "</table>";
@@ -422,7 +422,7 @@ $xml->load( "gamefc.xml" ); // Se o XML for externo, troque "gamefc.xml" pelo li
                             <img src="img/card-1.jpg" alt="">
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">Just a simple blog post</h2>
+                            echo "<h2 class="post-title">" . $valor->title . "</h2>";
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec
                                 elementum id</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
