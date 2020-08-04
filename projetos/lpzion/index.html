@@ -378,33 +378,6 @@
 
     <!-- News contant -->
 
-    <?php
-
-$xml= new DOMDocument;
-$xml->load( "http://www.siscomex.gov.br/exportacao/feed/" );
-
-    if (!$xml) {
-    echo "Erro ao abrir arquivo!";
-    exit;
-    }
-
-    $ver = simplexml_import_dom($xml);
-
-    echo "<table width=100%>";
-    echo "<tr><th>Coloca&ccedil;&atilde;o</th><th>Premia&ccedil;&atilde;o</th><th>R$</th><th>Retirada</th></tr>";
-
-    foreach ($ver as $valor) {
-    echo "<tr>";
-        echo "<td>" . $valor->title . "</td>";
-        echo "<td>" . $valor->link ."</td>";
-        echo "<td>" . $valor->description ."</td>";
-        echo "<td>" . $valor->generator ."</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-
-    ?>
-
     <div class="services-card-section spad">
         <div class="container">
             <div class="section-title">
@@ -422,7 +395,7 @@ $xml->load( "http://www.siscomex.gov.br/exportacao/feed/" );
                             <img src="img/card-1.jpg" alt="">
                         </div>
                         <div class="card-text">
-                            echo "<h2 class="post-title">" . $valor->title . "</h2>";
+                            <h2 class="post-title">Just a simple blog post</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec
                                 elementum id</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
