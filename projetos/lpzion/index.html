@@ -378,6 +378,33 @@
 
     <!-- News contant -->
 
+    <?php
+
+$xml= new DOMDocument;
+$xml->load( "gamefc.xml" ); // Se o XML for externo, troque "gamefc.xml" pelo link
+
+    if (!$xml) {
+    echo "Erro ao abrir arquivo!";
+    exit;
+    }
+
+    $ver = simplexml_import_dom($xml);
+
+    echo "<table width=100%>";
+    echo "<tr><th>Coloca&ccedil;&atilde;o</th><th>Premia&ccedil;&atilde;o</th><th>R$</th><th>Retirada</th></tr>";
+
+    foreach ($ver as $valor) {
+    echo "<tr>";
+        echo "<td>" . $valor->Colocacao . "</td>";
+        echo "<td>" . $valor->Premiacao ."</td>";
+        echo "<td>" . $valor->ValorDeMercado ."</td>";
+        echo "<td>" . $valor->Retirada ."</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+
+    ?>
+
     <div class="services-card-section spad">
         <div class="container">
             <div class="section-title">
