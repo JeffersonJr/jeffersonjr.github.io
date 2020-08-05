@@ -392,7 +392,7 @@
                             <h3>/08/2020</h3>
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">Exportação n° 049/2020</h2>
+                            <h2 class="post-title" id="post-title-1">Título</h2>
                             <p>Inclusão de produtos em LPCO da Polícia Federal</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
                         </div>
@@ -406,7 +406,7 @@
                             <h3>/08/2020</h3>
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">Exportação n° 049/2020</h2>
+                            <h2 class="post-title" id="post-title-2">Título</h2>
                             <p>Inclusão de produtos em LPCO da Polícia Federal</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
                         </div>
@@ -420,7 +420,7 @@
                             <h3>/08/2020</h3>
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">Exportação n° 049/2020</h2>
+                            <h2 class="post-title" id="post-title-3">Título</h2>
                             <p>Inclusão de produtos em LPCO da Polícia Federal</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
                         </div>
@@ -434,7 +434,7 @@
                             <h3>/08/2020</h3>
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">Exportação n° 049/2020</h2>
+                            <h2 class="post-title" id="post-title-4">Título</h2>
                             <p>Inclusão de produtos em LPCO da Polícia Federal</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
                         </div>
@@ -450,7 +450,7 @@
                             <h3>/08/2020</h3>
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">Exportação n° 049/2020</h2>
+                            <h2 class="post-title" id="post-title-5">Título</h2>
                             <p>Inclusão de produtos em LPCO da Polícia Federal</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
                         </div>
@@ -464,7 +464,7 @@
                             <h3>/08/2020</h3>
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">Exportação n° 049/2020</h2>
+                            <h2 class="post-title" id="post-title-6">Título</h2>
                             <p>Inclusão de produtos em LPCO da Polícia Federal</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
                         </div>
@@ -478,7 +478,7 @@
                             <h3>/08/2020</h3>
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">Exportação n° 049/2020</h2>
+                            <h2 class="post-title" id="post-title-7">Título</h2>
                             <p>Inclusão de produtos em LPCO da Polícia Federal</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
                         </div>
@@ -492,7 +492,7 @@
                             <h3>/08/2020</h3>
                         </div>
                         <div class="card-text">
-                            <h2 class="post-title">Exportação n° 049/2020</h2>
+                            <h2 class="post-title" id="post-title">Título</h2>
                             <p>Inclusão de produtos em LPCO da Polícia Federal</p>
                             <a href="blog-post.html" class="read-more">Saber mais</a>
                         </div>
@@ -516,6 +516,24 @@
 <!-- Footer section end -->
 
 <!--====== Javascripts & Jquery ======-->
+
+<script>
+    var text, parser, xmlDoc;
+
+    text = "http://www.siscomex.gov.br/home/assine-o-rss-feed/";
+    const xmlHttpRequest = new XMLHttpRequest();
+
+    parser = new DOMParser();
+    xmlDoc = xmlhttp.responseXML;
+    txt = "";
+    x = xmlDoc.getElementsByTagName("ARTIST");
+    for (i = 0; i < x.length; i++) {
+        txt += x[i].childNodes[0].nodeValue + "<br>";
+    }
+
+    document.getElementById("post-title").innerHTML = txt;
+</script>
+
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/magnific-popup.min.js"></script>
