@@ -169,23 +169,23 @@ body,html{
     font-size:1rem;
     font-weight:300
 }
-footer.trampos-co,header.trampos-co{
+footer.header-to,header.header-to{
     display:block;
     clear:both
 }
 @media print{
-    footer.trampos-co,header.trampos-co{
+    footer.header-to,header.header-to{
         display:none
     }
 }
-footer.trampos-co .wrapper,header.trampos-co .wrapper{
+footer.header-to .wrapper,header.header-to .wrapper{
     clear:both;
     overflow:hidden;
     position:relative;
     padding:5px 20px;
     background-color:#3f3736
 }
-footer.trampos-co{
+footer.header-to{
     padding-top:50px
 }
 .colorline{
