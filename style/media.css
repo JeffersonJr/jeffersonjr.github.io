@@ -1,0 +1,20 @@
+@media screen{
+    .primary-color.background{
+        background-color:#040404 
+    }
+    .primary-color.text{
+        color:#040404 
+    }
+    .primary-color.border{
+        border-color:#040404 
+    }
+    .secondary-color.background{
+        background-color:#636363 
+    }
+    .secondary-color.text{
+        color:#1e7680 
+    }
+    body{
+        background-color:#f1f2f0 
+    }
+}
