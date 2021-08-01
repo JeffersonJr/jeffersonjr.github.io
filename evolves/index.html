@@ -25,10 +25,11 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#features">Ferramentas</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
                 <li class="nav-item"><a class="nav-link" href="#plans">Planos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Depoimentos</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
                 <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
             </ul>
@@ -102,24 +103,33 @@
     </div>
 </section>
 <!-- CTA-->
-<section class="py-5 border-bottom">
+<section class="py-5 border-bottom text-center">
     <div class="container px-5 my-5">
+        <div class="col-md-12">
+            <img class="img-fluid" src="/images/portais.png">        
+        </div>
         <div class="text-center mb-5">
-            <h2 class="fw-bolder">Começe agora mesmo sem compromisso</h2>
-            <p class="lead mb-0">Nós te damos 15 dias para testar, sem contrato ou burocracia.</p>
+            <h2 class="fw-bolder">Os melhores portais imobiliários</h2>
+            <p class="lead mb-0">Integre com os melhores players do mercado e tenha sempre certeza seus imóveis estão no lugar certo e na hora certa.</p>
         </div>
         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#contact">🤔 Quero saber mais</a>
             <a class="btn btn-outline-dark btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalenjoy">💻 Testar Grátis</a>
         </div>
+    </div>
 </section>
 <!-- Pricing section-->
 <section class="bg-light py-5 border-bottom" id="plans">
-    <div class="container px-5 my-5">
+    <div class="container px-5 my-5" id="app">
         <div class="text-center mb-5">
             <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="fas fa-money-bill-wave"></i></div>
             <h2 class="fw-bolder">O plano ideal para seu negócio</h2>
             <p class="lead mb-3">Com nossos planos de preços sem complicações</p>
+            <div class="form-switch px-5">
+                <label class="form-check-label px-5" for="flexSwitchCheckChecked">Mensal</label>
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" v-model="type" @change="changetype()">
+                <label class="form-check-label px-3" for="flexSwitchCheckChecked">Anual</label>
+            </div>
         </div>
         <div class="row gx-5 justify-content-center">
             <!-- Pricing card free-->
@@ -131,41 +141,38 @@
                             Starter
                         </div>
                         <div class="mb-3">
-                            <span class="display-4 fw-bold">R$ 99,</span>
-                            <span class="text-muted">/ mês.</span>
+                            <span class="display-4 fw-bold">R$ {{ starter }},</span>
+                            <span class="text-muted" v-if="type">/ ano.</span>
+                            <span class="text-muted" v-else>/ mês.</span>
                         </div>
                         <ul class="list-unstyled mb-4">
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                <strong>1 usuário</strong>
+                                <strong>Site imobiliário</strong>
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                5GB storage
+                                Sistema imobiliário
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Unlimited public projects
+                                2 usuários
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Community access
+                                Cadastro de 250 imóveis
                             </li>
-                            <li class="mb-2 text-muted">
-                                <i class="bi bi-x"></i>
-                                Unlimited private projects
+                            <li class="mb-2">
+                                <i class="bi bi-check text-primary"></i>
+                                3 contas de email
                             </li>
-                            <li class="mb-2 text-muted">
-                                <i class="bi bi-x"></i>
-                                Suporte feliz :D
-                            </li>
-                            <li class="mb-2 text-muted">
-                                <i class="bi bi-x"></i>
-                                Free linked domain
+                            <li class="mb-2">
+                                <i class="bi bi-check text-primary"></i>
+                                Integração com portais imobiliários
                             </li>
                             <li class="text-muted">
                                 <i class="bi bi-x"></i>
-                                Monthly status reports
+                                Chatbot integrado
                             </li>
                         </ul>
                         <div class="d-grid"><a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalbuy">Escolher Plano</a></div>
@@ -181,41 +188,38 @@
                             Pro
                         </div>
                         <div class="mb-3">
-                            <span class="display-4 fw-bold">R$ 199,</span>
-                            <span class="text-muted">/ mês.</span>
+                            <span class="display-4 fw-bold">R$ {{ pro }},</span>
+                            <span class="text-muted" v-if="type">/ ano.</span>
+                            <span class="text-muted" v-else>/ mês.</span>
                         </div>
                         <ul class="list-unstyled mb-4">
-                            <li class="mb-2">
+                        <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                <strong>5 users</strong>
+                                <strong>Site imobiliário</strong>
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                5GB storage
+                                Sistema imobiliário
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Unlimited public projects
+                                6 usuários
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Community access
+                                Cadastro de 1500 imóveis
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Unlimited private projects
+                                7 contas de email
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Dedicated support
-                            </li>
-                            <li class="mb-2">
-                                <i class="bi bi-check text-primary"></i>
-                                Free linked domain
+                                Integração com portais imobiliários
                             </li>
                             <li class="text-muted">
                                 <i class="bi bi-x"></i>
-                                Monthly status reports
+                                Chatbot integrado
                             </li>
                         </ul>
                         <div class="d-grid"><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalbuy">Escolher Plano</a></div>
@@ -231,42 +235,38 @@
                             Enterprise
                         </div>
                         <div class="mb-3">
-                            <span class="display-4 fw-bold">R$ 299,</span>
-                            <span class="text-muted">/ mês.</span>
+                            <span class="display-4 fw-bold">R$ {{ enterprise }},</span>
+                            <span class="text-muted" v-if="type">/ ano.</span>
+                            <span class="text-muted" v-else>/ mês.</span>
                         </div>
                         <ul class="list-unstyled mb-4">
-                            <li class="mb-2">
+                        <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                <strong>Unlimited users</strong>
+                                <strong>Site imobiliário</strong>
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                5GB storage
+                                Sistema imobiliário
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Unlimited public projects
+                                12 usuários
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Community access
+                                Cadastro de imóveis ilimitados
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Unlimited private projects
+                                13 contas de email
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                Dedicated support
+                                Integração com portais imobiliários
                             </li>
                             <li class="mb-2">
                                 <i class="bi bi-check text-primary"></i>
-                                <strong>Unlimited</strong>
-                                linked domains
-                            </li>
-                            <li class="text-muted">
-                                <i class="bi bi-check text-primary"></i>
-                                Monthly status reports
+                                Chatbot integrado
                             </li>
                         </ul>
                         <div class="d-grid"><a class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalbuy">Escolher Plano</a></div>
@@ -381,10 +381,22 @@
         </div>
     </div>
 </section>
+<!-- CTA-->
+<section class="py-5 border-bottom">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bolder">Começe agora mesmo sem compromisso</h2>
+            <p class="lead mb-0">Nós te damos 15 dias para testar, sem contrato ou burocracia.</p>
+        </div>
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#contact">🤔 Quero saber mais</a>
+            <a class="btn btn-outline-dark btn-lg px-4" data-bs-toggle="modal" data-bs-target="#modalenjoy">💻 Testar Grátis</a>
+        </div>
+</section>
 <!-- Footer-->
 <footer class="py-5 bg-dark text-center">
     <div class="container px-5">
-        <p class="m-0 text-white py-3">Copyright © 2021 
+        <p class="m-0 text-white py-3">Copyright © <span id="year"></span> 
             <img class="mb-2" src="images/logo_mini.png" alt=""> evolves. Todos os direitos reservados.
         </p>
         <ul class="list-inline">
@@ -478,6 +490,31 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data : { 
+            type: false,
+            starter : '99',
+            pro : '199',
+            enterprise : '299'
+        },
+        methods: {
+            changetype () {
+                if (!this.type) {
+                    this.starter = 99;
+                    this.pro = 199;
+                    this.enterprise = 299;
+                } else {
+                    this.starter = 99 * 11;
+                    this.pro = 199 * 11;
+                    this.enterprise = 299 * 11;
+                }
+            }
+        }
+    });
+</script>
 <!-- Typing Text-->
 <script>
 var div = document.getElementById('log');
@@ -520,6 +557,8 @@ function rodape(conteudos, el) {
 	prox(prox);
 }
 rodape(textos);
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
 </script>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
