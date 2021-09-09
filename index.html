@@ -1,340 +1,475 @@
-
 <!DOCTYPE html>
+<html lang="pt-BR">
+
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, user-scalable=no">
-      <title>Jefferson Campos</title>
-      <style>
-         /* preguiça de fazer um arquivo css */
-         /* isso aqui quer dizer que eu não quero que meu texto tenha cor e formato desses temas toscos que você usa nesse seu Linux+Firefox aí */
-         html, body, div, span, applet, object, iframe,
-         h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-         a, abbr, acronym, address, big, cite, code,
-         del, dfn, em, img, ins, kbd, q, s, samp,
-         small, strike, strong, sub, sup, tt, var,
-         b, u, i, center,
-         dl, dt, dd, ol, ul, li,
-         fieldset, form, label, legend,
-         table, caption, tbody, tfoot, thead, tr, th, td,
-         article, aside, canvas, details, embed, 
-         figure, figcaption, footer, header, hgroup, 
-         menu, nav, output, ruby, section, summary,
-         time, mark, audio, video {
-         margin: 0;
-         padding: 0;
-         border: 0;
-         font-size: 100%;
-         font: inherit;
-         vertical-align: baseline;
-         overflow-x: hidden;
-         overflow-y: scroll;
-         }
-         article, aside, details, figcaption, figure, 
-         footer, header, hgroup, menu, nav, section {
-         display: block;
-         }
-         body {
-         line-height: 1;
-         }
-         ol, ul {
-         list-style: none;
-         }
-         blockquote, q {
-         quotes: none;
-         }
-         blockquote:before, blockquote:after,
-         q:before, q:after {
-         content: '';
-         content: none;
-         }
-         table {
-         border-collapse: collapse;
-         border-spacing: 0;
-         }
-         /* ----------------------- */
-         html {
-         font-family: monospace;
-         color: #666;
-         }
-         .text-italic {
-         font-style: italic;
-         line-height: 20px;
-         }
-         .text-bold {
-         font-weight: bold;
-         }
-         .text-com-aquela-linhazinha-bonita {
-         text-decoration: line-through;
-         }
-         #history-of-my-life {
-         width: 60%;
-         margin: 0 auto;
-         }
-         #history-of-my-life > p {
-         font-size: 18px;
-         line-height: 25px;
-         }
-         #useless-links {
-         }
-         #useless-links li {
-         line-height: 20px;
-         }
-         h1 {
-         font-size: 50px;
-         font-weight: bold;
-         padding-top: 30px;
-         }
-         h4 {
-         font-size: 20px;
-         }
-         a {
-         color: #00a2ff;
-         position: relative;
-         display: inline-block;
-         }
-         a:hover:after {
-         content: 'disco';
-         position: absolute;
-         width: 80px;
-         left: 45%;
-         margin-left: -30px;
-         top: 100%;
-         height: 100%; /* ???? */
-         overflow: hidden;
-         word-break: break-all;
-         text-align: center;
-         }
-         a:hover, a:hover:after {
-         z-index: 99999;
-         -webkit-animation-name: blinker;
-         -webkit-animation-duration: 300ms;
-         -webkit-animation-timing-function: linear;
-         -webkit-animation-iteration-count: infinite;
-         -moz-animation-name: blinker;
-         -moz-animation-duration: 300ms;
-         -moz-animation-timing-function: linear;
-         -moz-animation-iteration-count: infinite;
-         animation-name: blinker;
-         animation-duration: 300ms;
-         animation-timing-function: linear;
-         animation-iteration-count: infinite;
-         }
-         a:visited {
-         color: #0082ce;
-         }
-         @-moz-keyframes blinker {  
-         0% { 
-         background-color: #000;
-         }
-         50% {
-         background-color: #fff;
-         }
-         100% { 
-         background-color: #000;
-         }
-         }
-         @-webkit-keyframes blinker {  
-         0% { 
-         background-color: #000;
-         }
-         50% {
-         background-color: #fff;
-         }
-         100% { 
-         background-color: #000;
-         }
-         }
-         @keyframes blinker {  
-         0% { 
-         background-color: #000;
-         }
-         50% {
-         background-color: #fff;
-         }
-         100% { 
-         background-color: #000;
-         }
-         }
-         @-moz-keyframes party-hard {  
-         0% {
-         width: 0px;
-         }
-         25% {
-         width: 30px;
-         }
-         50% {
-         width: 0px;
-         }
-         75% {
-         width: 60px;
-         }
-         90% {
-         width: 60px; 
-         }
-         100% {
-         width: 0px; 
-         }
-         }
-         @-webkit-keyframes party-hard {  
-         0% {
-         width: 0px;
-         }
-         25% {
-         width: 30px;
-         }
-         50% {
-         width: 0px;
-         }
-         75% {
-         width: 60px;
-         }
-         90% {
-         width: 60px; 
-         }
-         100% {
-         width: 0px; 
-         }
-         }
-         @keyframes party-hard {  
-         0% {
-         width: 0px;
-         }
-         25% {
-         width: 30px;
-         }
-         50% {
-         width: 0px;
-         }
-         75% {
-         width: 60px;
-         }
-         90% {
-         width: 60px; 
-         }
-         100% {
-         width: 0px; 
-         }
-         }
-         /* WHOA, EU SEI FAZÊ SITE RESPONSIVO */
-         @media (max-width: 900px) {
-         #history-of-my-life {
-         width: 100%;
-         margin: 10px;
-         }
-         }
-      </style>
-   </head>
-   <body>
-      <div id="history-of-my-life">
-         <h1>Jefferson Campos Beira Junior</h1>
-         <br />
-         <p>Consultor de tecnologia | Programador Padawan</p>
-         <br />
-         <br />
-         <br />
-         <p>
-            Criador de soluções para problemas por meio da tecnologia. Programador Padawan, Customer Success de coração e Designer autodidata.
-            <br />
-            <br />
-            <br />
-         <h4>Experiênicia</h4>
-         <br />
-         <br />
-         <ul id="useless-links">
-            <li>Cadmus Soluções em TI: <a href="">Web designer sênior</a></li>
-            <li>⤷ 05.2021 - Atualmente</li>
-            <li>Zion Tecnologia: <a href="">Desenvolvedor Frontend</a></li>
-            <li>⤷ 05.2019 - Atualmente</li>
-            <li>Swell company: <a href="">Social midia design</a></li>
-            <li>⤷ 01.2021 - 06.2021 (5 meses)</li>
-            <li>Microsistec Tecnologia: <a href="">Customer Success Manager</a></li>
-            <li>⤷ 01.2018 - 02.2020 (2 anos e 2 meses)</li>
-            <li>Designer Freelancer: <a href="">Designer / Illustrador</a></li>
-            <li>⤷ 08.2017 - 12.2017 (5 meses)</li>
-            <li>4K Art's & Gráfica: <a href="">Designer Gráfico</a></li>
-            <li>⤷ 01.2017 - 08.2017 (8 meses)</li>
-            <li>Logos Logística: <a href="">Assistente Administrativo</a></li>
-            <li>⤷ 03.2016 - 07.2016 (5 meses)</li>
-            <li>Hospital Nipo Brasileiro: <a href="">Auxiliar de Almoxarifado</a></li>
-            <li>⤷ 11.2012 - 06.2013 (8 meses)</li>
-         </ul>
-         <br />
-         <br />
-         <br />
-         <h4>Formação</h4>
-         <br />
-         <br />
-         <ul id="useless-links">
-            <li>Etec Praia Grande: <a href="https://etecpg.com.br">Técnico, Informática para Internet</a></li>
-            <li>⤷  2017 - 2018</li>
-            <li>Prime Cursos: <a href="">Illustrador</a></li>
-            <li>⤷  2015 - 2016</li>
-            <li>Prime Cursos: <a href="">Marketing Digital</a></li>
-            <li>⤷  2015 - 2016</li>
-            <li>Ascendino Reis:  <a href="">Ensino Médio</a></li>
-            <li>⤷  2008 - 2011</li>
-         </ul>
-         <br />
-         <br />
-         <br />
-         <h4><span class="text-com-aquela-linhazinha-bonita">Desastres</span> Projetos</h4>
-         <br />
-         <br />
-         <ul id="useless-links">
-            <li>
-               Relógio binário: 
-               <a href="https://github.com/JeffersonJr/Relogio_binario" target="_blank">Ver no github</a> - 
-               <a href="https://jeffersonjunior.com.br/projetos/relogiobinario" target="_blank">Ver página</a>
-            </li>
-            <li>
-               Pong:
-               <a href="https://github.com/JeffersonJr/pingpong-com-canvas" target="_blank">Ver no github</a> - 
-               <a href="https://jeffersonjunior.com.br/projetos/pingpong" target="_blank">Ver página</a>
-            </li>
-            <li>
-               Jokenpô:
-               <a href="https://github.com/JeffersonJr/jokenpo" target="_blank">Ver no github</a> - 
-               <a href="https://jeffersonjunior.com.br/projetos/jokenpo" target="_blank">Ver página</a>
-            </li>
-            <li>
-               Site Zion:
-               <a href="https://zion-br.com.br/" target="_blank">Ver página</a>
-            </li>
-            <li>
-               Bike Itaú:
-               <a href="https://bikeitau.com.br/" target="_blank">Ver página</a>
-            </li>
-            <li>
-               Tembici:
-               <a href="https://tembici.com.br/" target="_blank">Ver página</a>
-            </li>
-            <li>
-               Smilink:
-               <a href="https://smilink.com.br/" target="_blank">Ver página</a>
-            </li>
-         </ul>
-         <br />
-         <br />
-         <br />
-         <h4>Links insignificantes</h4>
-         <br />
-         <br />
-         <ul id="useless-links">
-            <li>github: <a href="https://github.com/JeffersonJr">https://github.com/JeffersonJr</a></li>
-            <li>Linkedin: <a href="https://www.linkedin.com/in/jeffersonjunior">https://www.linkedin.com/in/jeffersonjunior</a></li>
-            <li>Facebook: <a href="https://www.facebook.com/JeffersonJJR">https://www.facebook.com/JeffersonJJR</a></li>
-            <li>Instagram: <a href="https://www.instagram.com/jeffersonjunior.c">https://www.instagram.com/jeffersonjunior.c</a></li>
-         </ul>
-         <br />
-         <br />
-         <br />
-         <span class="text-italic">
-            powered by <a href="https://jeffersonjr.github.io">https://jeffersonjr.github.io</a>
-         </span>
-         </p>
-         <br />
-         <br />
-      </div>
-   </body>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon.png">
+
+    <title>Jefferson Campos Beira Junior | Consultor de T.I |</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <meta itemprop="title" content="Jefferson Campos Beira Junior | Consultor de T.I">
+    <meta itemprop="description" content="Criador de soluções de problemas por meio da tecnologia.
+
+Programador Padawan, Customer Success de coração, Designer autodidata.">
+
+    <meta name="title" content="Jefferson Campos Beira Junior | Consultor de T.I">
+    <meta name="description" content="Criador de soluções de problemas por meio da tecnologia.
+
+Programador Padawan, Customer Success de coração, Designer autodidata.">
+
+    <meta property="og:title" content="Jefferson Campos Beira Junior | Consultor de T.I">
+    <meta property="og:description" content="Criador de soluções de problemas por meio da tecnologia.
+    Programador Padawan, Customer Success de coração, Designer autodidata.">
+
+    <meta name="twitter:title" content="Jefferson Campos Beira Junior | Consultor de T.I">
+    <meta name="twitter:description" content="Criador de soluções de problemas por meio da tecnologia. Programador
+    Padawan, Customer Success de coração, Designer autodidata.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="/img/perfil.jpg">
+    <meta name="twitter:image:src" content="/img/perfil.jpg">
+
+    <meta property="og:site_name" content="jeffersonjunior.com.br">
+    <meta property="og:url" content="https://jeffersonjunior.com.br">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="fb:app_id" content="190412707757022">
+    <meta property="fb:admins" content="530862981">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://jeffersonjunior.com.br/script/get-time.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Lato|Arvo|PT+Sans|PT+Serif|Raleway|Open+Sans|Slabo+13px" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="style/beautiful.css">
+    <link rel="stylesheet" href="style/media.css">
+    <link rel="stylesheet" href="style/stylesheet.css">
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <div id="page">
+        <a id="top"></a>
+
+        <div id="mobile-nav">
+            <div id="mobile-button" class="mobile-button">
+                <div class="bars">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+
+        <nav id="index-nav">
+            <ul>
+                <li><a href="#top">Topo</a></li>
+
+                <li><a href="#experiences"><i class="fa fa-suitcase"></i> Experiências
+                <!--<span class="size">10</span>--></a>
+                </li>
+
+                <li><a href="#educations"><i class="fa fa-book"></i> Educações
+				<!--<span class="size">4</span>--></a>
+                </li>
+
+                <li><a href="#languages"><i class="fa fa-globe"></i> Idiomas
+                <!--<span class="size">2</span>--></a>
+                </li>
+
+                <li><a href="#projetos"><i class="fa fa-gear"></i> Projetos
+				<!--<span class="size">10</span>--></a>
+                </li>
+
+                <li><a href="#links"><i class="fa fa-link"></i> Links
+				<!--<span class="size">5</span>--></a>
+                </li>
+                <li><a href="/jeffersonbeira.pdf" target="_blank" rel="noopener"><i class="fa fa-download"></i> Download PDF</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <header class="header-to">
+
+            </header>
+
+            <section class="row headline">
+                <div class="small-2 large-2 col avatar">
+                    <img alt="Perfil" src="img/perfil-new.jpg" width="100%">
+                </div>
+                <div class="small-2 large-6 col name">
+                    <h1 class="primary-color text">Jefferson Campos Beira Junior</h1>
+                    <h2 class="secondary-color text">Consultor de tecnologia | Programador Padawan</h2>
+                    <p class="address primary-color text">
+                        <i class="fa fa-envelope" aria-hidden="true"></i> Email: contato@jeffersonjunior.com.br
+                    </p>
+                    <p class="address primary-color text">
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> Cel: (13) 98132-6869
+                    </p>
+                    <p class="address primary-color text">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> Parque Novo Mundo - São Paulo, SP
+                    </p>
+                </div>
+            </section>
+
+            <section class="row">
+                <div class="small-2 large-2 col">&nbsp;</div>
+                <div class="small-2 large-6 col">
+                    <p class="short-bio secondary-color background">
+                        <span>Criador de soluções para problemas por meio da tecnologia. Programador Padawan, Customer Success de coração e Designer autodidata.</span>
+                    </p>
+                </div>
+            </section>
+
+            <a id="experiences"></a>
+            <section class="row">
+                <div class="small-2 large-2 col">
+                    <h3 class="title primary-color text border small-align-left"><i class="fa fa-suitcase"></i> EXPERIÊNCIAS</h3>
+                </div>
+                <div class="small-2 large-6 col">
+                    <hr class="small-hidden primary-color text border">
+                </div>
+
+                <ul class="sections-list experiences">
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">05.2021 - Atualmente</h4>
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">WEB DESIGNER SÊNIOR</h2>
+                            <h3 class="company-name">Cadmus Soluções em TI</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">05.2019 - Atualmente</h4>
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">DESENVOLVEDOR WEB FRONT END</h2>
+                            <h3 class="company-name">Zion Tecnologia</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">02.2021 - 06.2021</h4>
+                            <p class="how-long small-align-left small-inline">(5 meses)</p>
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">SOCIAL MEDIA DESIGNER</h2>
+                            <h3 class="company-name">Swell Company</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">01.2019 - 02.2020</h4>
+                            <p class="how-long small-align-left small-inline">(1 ano e 2 meses)</p>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">CUSTOMER SUCCESS MANANGER</h2>
+                            <h3 class="company-name">Microsistec Tecnologia Imobiliária</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">07.2018 - 12.2018</h4>
+                            <p class="how-long small-align-left small-inline">(6 meses)</p>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">CUSTOMER SUCCESS</h2>
+                            <h3 class="company-name">Microsistec Tecnologia imobiliária</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">01.2018 - 06.2018</h4>
+                            <p class="how-long small-align-left small-inline">(6 meses)</p>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">ESTAGIÁRIO</h2>
+                            <h3 class="company-name">Microsistec Tecnologia Imobiliária</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">08.2017 - 12.2017</h4>
+                            <p class="how-long small-align-left small-inline">(5 meses)</p>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">DESIGNER / ILUSTRADOR</h2>
+                            <h3 class="company-name">Designer Freelance</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">01.2017 - 08.2017</h4>
+                            <p class="how-long small-align-left small-inline">(8 meses)</p>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">DESIGNER GRÁFICO</h2>
+                            <h3 class="company-name">4K Art's & Gráfica</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">03.2016 - 07.2016</h4>
+                            <p class="how-long small-align-left small-inline">(5 meses)</p>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">ASSISTENTE ADMINISTRATIVO</h2>
+                            <h3 class="company-name">Logos Brasil Logistica e Transporte Ltda</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text"></li>
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">11.2012 - 06.2013</h4>
+                            <p class="how-long small-align-left small-inline">(8 meses)</p>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="position-name secondary-color text">AUXILIAR DE ALMOXARIFADO</h2>
+                            <h3 class="company-name">Beneficiencia Nipo Brasileira de São Paulo</h3>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <a id="educations"></a>
+            <section class="row">
+                <div class="small-2 large-2 col">
+                    <h3 class="title primary-color text border small-align-left"><i class="fa fa-book"></i> EDUCAÇÕES</h3>
+                </div>
+
+                <div class="small-2 large-6 col">
+                    <hr class="small-hidden primary-color text border">
+                </div>
+
+                <ul class="sections-list educations">
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">2017 - 2018</h4>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="college-name secondary-color text">Etec Praia Grande</h2>
+                            <h3 class="course">
+							Técnico, 
+							Informática para Internet
+						</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">2016 - 2016</h4>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="college-name secondary-color text">Prime Cursos</h2>
+                            <h3 class="course">
+							Ensino a distância, 
+							Marketing Digital
+						</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">2015 - 2015</h4>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="college-name secondary-color text">Prime Cursos</h2>
+                            <h3 class="course">
+							Ensino a distância, 
+							Illustrator CC
+						</h3>
+                        </div>
+                    </li>
+                    <li class="item primary-color text">
+                        <div class="small-2 large-2 col">
+                            <h4 class="date small-align-left small-inline">2008 - 2011</h4>
+
+                        </div>
+                        <div class="small-2 large-6 col">
+                            <h2 class="college-name secondary-color text">Ascendino Reis</h2>
+                            <h3 class="course">
+							Ensino médio, 
+							Ensino médio
+						</h3>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <a id="languages"></a>
+            <section class="row">
+                <div class="small-2 large-2 col">
+                    <h3 class="title primary-color text border small-align-left"><i class="fa fa-globe"></i> IDIOMAS</h3>
+                </div>
+                <div class="small-2 large-6 col">
+                    <hr class="small-hidden primary-color text border">
+                    <ul class="sections-list languages">
+                        <li class="item primary-color text">
+                            <h2 class="language-name secondary-color text">Inglês </h2>
+                            <h3 class="level">pré-intermediário</h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="language-name secondary-color text">Português</h2>
+                            <h3 class="level">nativo ou fluente</h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <a id="projetos"></a>
+            <section class="row">
+                <div class="small-2 large-2 col">
+                    <h3 class="title primary-color text border small-align-left"><i class="fa fa-link"></i> Projetos</h3>
+                </div>
+                <div class="small-2 large-6 col">
+                    <hr class="small-hidden primary-color text border">
+                    <ul class="sections-list links">
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i> Artes</h2>
+							<h3 class="link"><a href="artes.html" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i> Relógio binário</h2>
+							<h3 class="link"><a href="https://github.com/JeffersonJr/jeffersonjr.github.io" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-github" aria-hidden="true"></i> Ver no github</a></h3>
+							<h3 class="link"><a href="/projetos/relogiobinario/" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i> Pong</h2>
+							<h3 class="link"><a href="https://github.com/JeffersonJr/pingpong-com-canvas" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-github" aria-hidden="true"></i> Ver no github</a></h3>
+							<h3 class="link"><a href="/projetos/pingpong/" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i> Jokempo</h2>
+							<h3 class="link"><a href="https://github.com/JeffersonJr/jokenpo" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-github" aria-hidden="true"></i> Ver no github</a></h3>
+							<h3 class="link"><a href="/projetos/jokenpo/" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i> Site Zion Tecnologia</h2>
+							<h3 class="link"><a href="http://zion-br.com.br/" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i> DuimpWeb</h2>
+							<h3 class="link"><a href="https://github.com/JeffersonJr/lpzion" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-github" aria-hidden="true"></i> Ver no github</a></h3>
+							<h3 class="link"><a href="http://duimpweb.com.br/" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i> King Mason</h2>
+							<h3 class="link"><a href="https://www.kingmason.com.br/" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i>Bike Itaú</h2>
+							<h3 class="link"><a href="https://bikeitau.com.br/" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i>Tembici</h2>
+							<h3 class="link"><a href="https://www.tembici.com.br/" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-magic" aria-hidden="true"></i>Smilink</h2>
+							<h3 class="link"><a href="https://www.smilink.com.br/" target="_blank" rel="noopener" class="primary-color text"><i class="fa fa-file-text-o" aria-hidden="true"></i> Ver página</a></h3>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <a id="links"></a>
+            <section class="row">
+                <div class="small-2 large-2 col">
+                    <h3 class="title primary-color text border small-align-left"><i class="fa fa-link"></i> LINKS</h3>
+                </div>
+                <div class="small-2 large-6 col">
+                    <hr class="small-hidden primary-color text border">
+                    <ul class="sections-list links">
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-github" aria-hidden="true"></i>_Github</h2>
+                            <h3 class="link"><a href="https://github.com/JeffersonJr/" target="_blank" rel="noopener" class="primary-color text">https://github.com/JeffersonJr/</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-linkedin" aria-hidden="true"></i>_Linkedin</h2>
+                            <h3 class="link"><a href="https://www.linkedin.com/in/jeffersonjunior/" target="_blank" rel="noopener" class="primary-color text">https://www.linkedin.com/in/jeffersonjunior/</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-facebook" aria-hidden="true"></i>_Facebook</h2>
+                            <h3 class="link"><a href="https://www.facebook.com/JeffersonJJR/" target="_blank" rel="noopener" class="primary-color text">https://www.facebook.com/JeffersonJJR/</a></h3>
+                        </li>
+                        <li class="item primary-color text">
+                            <h2 class="title secondary-color text"><i class="fa fa-instagram" aria-hidden="true"></i>_Instagram</h2>
+                            <h3 class="link"><a href="https://www.instagram.com/jeffersonjunior.c/" target="_blank" rel="noopener" class="primary-color text">https://www.instagram.com/jeffersonjunior.c/</a></h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="row">
+                <div class="small-2 large-2 col">
+                    <h3 class="title primary-color text border small-align-left">+INFORMAÇÕES</h3>
+                </div>
+                <div class="small-2 large-6 col">
+                    <hr class="small-hidden primary-color text border">
+                    <ul class="sections-list more-info primary-color text">
+                        <li class="item small-2 large-4 col">
+                            <i class="fa fa-fw fa-car secondary-color text"></i> Possui carteira de motorista
+                        </li>
+                        <li class="item small-2 large-4 col">
+                            <i class="fa fa-fw fa-truck secondary-color text"></i> Disponível para relocação
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="row">
+                <div class="small-2 large-2 col small-hidden">&nbsp;</div>
+                <div class="small-2 large-6 col">
+                    <hr class="primary-color text border'">
+                    <div class="row">
+                        <div class="share item small-2 large-4 col">
+                            <h3 class="primary-color text border">COMPARTILHE ESTE PERFIL</h3>
+                            <ul>
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://jeffersonjunior.com.br" target="_blank" rel="noopener"><i class="fa fa-facebook-square secondary-color text"></i></a></li>
+                                <li><a href="https://twitter.com/share?text=Jefferson Campos Beira: Consultor de T.I&amp;url=https://jeffersonjunior.com.br" target="_blank" rel="noopener"><i class="fa fa-twitter-square secondary-color text"></i></a></li>
+                                <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://jeffersonjunior.com.br&amp;title=Jefferson Campos Beira: Consultor de T.I&amp;summary=Criador de soluções de problemas por meio da tecnologia. Programador Padawan, Customer Success de coração, Designer autodidata.
+                                &amp;source=https://jeffersonjunior.com.br" target="_blank" rel="noopener"><i class="fa fa-linkedin-square secondary-color text"></i></a></li>
+                                <li><a href="mailto:?body=https://jeffersonjunior.com.br&amp;subject=Jefferson Campos Beira: Consultor de T.I"><i class="fa fa-envelope-square secondary-color text"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="get-in-touch item small-2 large-4 col">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <!-- #page -->
+
+    <footer>
+        <div align="center" style="padding:40px 0 20px;">
+            
+            <script src="script/bgcontrast.js"></script>
+            
+        </div>
+    </footer>
+    
+    <script src="script/themes.js"></script>
+    <script src="style/bootstrap/js/bootstrap.min.js"></script>
+    <script src="script/analitycs.js"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+</body>
+
 </html>

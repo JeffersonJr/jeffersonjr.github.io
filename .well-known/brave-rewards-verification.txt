@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: jeffersonjunior.com.br
+Token: 1a331ad75c36a4f352d2ca85689f25033e92a9b24a5394259c29526fc2898c32
