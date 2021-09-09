@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+      <title>Wesley Willian Schleumer de Góes</title>
+      <style>
+         /*
+         Site mantido em homenagem a um grande programador que já esteve entre nós, ele como pode ler no site era bem humilde em sua autobiografia, 
+         porém era um dos programadores que eu mais adimiorava.
+         Se hoje sou desenvolvedor web, uma parte disso eu devo ao Wes.
+         Grande Xila, que viva sempre em nossos corações e repositórios no github.
+        */
+        
+         /* preguiça de fazer um arquivo css */
+         /* isso aqui quer dizer que eu não quero que meu texto tenha cor e formato desses temas toscos que você usa nesse seu Linux+Firefox aí */
+
+         html, body, div, span, applet, object, iframe,
+         h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+         a, abbr, acronym, address, big, cite, code,
+         del, dfn, em, img, ins, kbd, q, s, samp,
+         small, strike, strong, sub, sup, tt, var,
+         b, u, i, center,
+         dl, dt, dd, ol, ul, li,
+         fieldset, form, label, legend,
+         table, caption, tbody, tfoot, thead, tr, th, td,
+         article, aside, canvas, details, embed, 
+         figure, figcaption, footer, header, hgroup, 
+         menu, nav, output, ruby, section, summary,
+         time, mark, audio, video {
+         margin: 0;
+         padding: 0;
+         border: 0;
+         font-size: 100%;
+         font: inherit;
+         vertical-align: baseline;
+         }
+         article, aside, details, figcaption, figure, 
+         footer, header, hgroup, menu, nav, section {
+         display: block;
+         }
+         body {
+         line-height: 1;
+         }
+         ol, ul {
+         list-style: none;
+         }
+         blockquote, q {
+         quotes: none;
+         }
+         blockquote:before, blockquote:after,
+         q:before, q:after {
+         content: '';
+         content: none;
+         }
+         table {
+         border-collapse: collapse;
+         border-spacing: 0;
+         }
+         /* ----------------------- */
+         html {
+         font-family: monospace;
+         color: #666;
+         }
+         .text-italic {
+         font-style: italic;
+         }
+         .text-bold {
+         font-weight: bold;
+         }
+         .text-com-aquela-linhazinha-bonita {
+         text-decoration: line-through;
+         }
+         #history-of-my-life {
+         width: 60%;
+         margin: 0 auto;
+         }
+         #history-of-my-life > p {
+         font-size: 18px;
+         line-height: 25px;
+         }
+         #useless-links {
+         }
+         #useless-links li {
+         line-height: 20px;
+         }
+         h1 {
+         font-size: 60px;
+         font-weight: bold;
+         }
+         h4 {
+         font-size: 20px;
+         }
+         a {
+         color: rgb(255, 0, 255);
+         position: relative;
+         display: inline-block;
+         }
+         a:hover:after {
+         content: 'disco';
+         position: absolute;
+         width: 60px;
+         left: 50%;
+         margin-left: -30px;
+         top: 100%;
+         height: 100%; /* ???? */
+         overflow: hidden;
+         word-break: break-all;
+         text-align: center;
+         }
+         a:hover, a:hover:after {
+         z-index: 99999;
+         -webkit-animation-name: blinker;
+         -webkit-animation-duration: 300ms;
+         -webkit-animation-timing-function: linear;
+         -webkit-animation-iteration-count: infinite;
+         -moz-animation-name: blinker;
+         -moz-animation-duration: 300ms;
+         -moz-animation-timing-function: linear;
+         -moz-animation-iteration-count: infinite;
+         animation-name: blinker;
+         animation-duration: 300ms;
+         animation-timing-function: linear;
+         animation-iteration-count: infinite;
+         }
+         a:visited {
+         color: rgb(255, 0, 180);
+         }
+         @-moz-keyframes blinker {  
+         0% { 
+         background-color: #000;
+         }
+         50% {
+         background-color: #fff;
+         }
+         100% { 
+         background-color: #000;
+         }
+         }
+         @-webkit-keyframes blinker {  
+         0% { 
+         background-color: #000;
+         }
+         50% {
+         background-color: #fff;
+         }
+         100% { 
+         background-color: #000;
+         }
+         }
+         @keyframes blinker {  
+         0% { 
+         background-color: #000;
+         }
+         50% {
+         background-color: #fff;
+         }
+         100% { 
+         background-color: #000;
+         }
+         }
+         @-moz-keyframes party-hard {  
+         0% {
+         width: 0px;
+         }
+         25% {
+         width: 30px;
+         }
+         50% {
+         width: 0px;
+         }
+         75% {
+         width: 60px;
+         }
+         90% {
+         width: 60px; 
+         }
+         100% {
+         width: 0px; 
+         }
+         }
+         @-webkit-keyframes party-hard {  
+         0% {
+         width: 0px;
+         }
+         25% {
+         width: 30px;
+         }
+         50% {
+         width: 0px;
+         }
+         75% {
+         width: 60px;
+         }
+         90% {
+         width: 60px; 
+         }
+         100% {
+         width: 0px; 
+         }
+         }
+         @keyframes party-hard {  
+         0% {
+         width: 0px;
+         }
+         25% {
+         width: 30px;
+         }
+         50% {
+         width: 0px;
+         }
+         75% {
+         width: 60px;
+         }
+         90% {
+         width: 60px; 
+         }
+         100% {
+         width: 0px; 
+         }
+         }
+         /* WHOA, EU SEI FAZÊ SITE RESPONSIVO */
+         @media (max-width: 900px) {
+         #history-of-my-life {
+         width: 100%;
+         margin: 10px;
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <div id="history-of-my-life">
+         <h1>about:me</h1>
+         <p>
+            Devo assumir que você chegou aqui porque viu minhas atividades no GitHub ou porque você procurou meu nome no Google, pois bem, se você estava me <span class="text-italic">stalkeando</span> você sabe bem quem eu sou, caso não, meu nome é <span class="text-com-aquela-linhazinha-bonita">ANTEDEGUEMON</span> Wesley, sou entusiasta de programação, não sou programador profissional, não sou MVP, não tenho mestrado, nem Ph.D., também não tenho indicação, nem fama, nem stars no GitHub e nem em faculdade eu pisei na vida(fiz cursinho no SENAI), porém, me dou bem na área, meu conhecimento é bem amplo mas minha pratica é muito superficial. Caso se interesse pelo meu perfil, você pode visualizar alguns dos meus <span class="text-com-aquela-linhazinha-bonita">desastres</span> projetos no meu <a href="https://github.com/schleumer/">GitHub</a>, e como também sou um pouco altruísta, você pode olhar meu perfil no <a href="http://stackoverflow.com/users/1146264/none?tab=profile">StackOverflow</a>(que não é lá muita coisa, mas dá pontinhos), alguns cismam em dizer que sou um ótimo programador e que tenho sempre resposta rápida para novas técnologias, porém, discordo, sou muito amador e o pouco conhecimento que tenho foi adquirido no bruteforce. Caso realmente queira apostar fichas em mim, você pode me testar, mande um e-mail para <span class="text-bold">wesley.schleumer [at] gmail [dot] com</span> com sua proposta e detalhes do teste, qualquer linguagem ou tecnologia é bem-vinda, até Java com JSP :)
+            <br />
+            <br />
+            <br />
+         <h4>Links insignificantes</h4>
+         <br />
+         <br />
+         <ul id="useless-links">
+            <li>facebook: nope</li>
+            <li>&nbsp;</li>
+            <li>codeivate: <a href="http://codeivate.com/users/schleumer">http://codeivate.com/users/schleumer</a></li>
+            <li>coderbits: <a href="https://coderbits.com/schleumer">https://coderbits.com/schleumer</a></li>
+            <li>github: <a href="https://github.com/schleumer">https://github.com/schleumer</a></li>
+            <li>stackoverflow: <a href="http://stackoverflow.com/users/1146264/none?tab=profile">http://stackoverflow.com/users/1146264/none?tab=profile</a></li>
+            <li>meu e-mail: <span class="text-bold">wesley.schleumer [at] gmail [dot] com</span></li>
+         </ul>
+         <br />
+         <br />
+         <br />
+         <span class="text-italic">não, isso não foi feito no DreamWeaver nem no FrontPage, eu tava com preguiça mesmo. Me baseei nos conceitos inovadores do site <a href="http://motherfuckingwebsite.com/">http://motherfuckingwebsite.com/</a></span>
+         </p>
+      </div>
+   </body>
+</html>
