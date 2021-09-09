@@ -13,7 +13,7 @@ var bgcontrast;
 document.write("<span style=\"color:"+bgcontrast+"\">powered by</span> ");
 
 if(bgcontrast == 'black'){
-	document.write('<img alt="logo" src="https://jeffersonjunior.com.br/img/jr.png" height="30" style="vertical-align:middle;" /> Jefferson Junior'); 
+	document.write('<img alt="logo" src="img\jr.webp" height="30" style="vertical-align:middle;" /> Jefferson Junior'); 
 } else {
-	document.write('<img alt="logo" src="https://jeffersonjunior.com.br/img/jrwhite.png" height="30" style="vertical-align:middle;" /> Jefferson Junior');
+	document.write('<img alt="logo" src="img\jr.webp" height="30" style="vertical-align:middle;" /> Jefferson Junior');
 }
