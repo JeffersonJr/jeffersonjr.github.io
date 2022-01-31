@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: jeffersonjr.github.io
-Token: 0dc5fd03ed9d0bf14222b0c3359860f28580787a47643b3f22fa24db68aa8bd4
+Token: 3c7629685b40bb803896074e1eb1c8e94ebd9e3de97efe6e76a75fae1d5bd8a9
