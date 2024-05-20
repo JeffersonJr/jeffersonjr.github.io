@@ -835,20 +835,20 @@ section {
 }
 
 .services .service-box.green {
-  border-bottom: 3px solid #08da4e;
+  border-bottom: 3px solid #003308;
 }
 
 .services .service-box.green .icon {
-  color: #08da4e;
+  color: #003308;
   background: #cffddf;
 }
 
 .services .service-box.green .read-more {
-  color: #08da4e;
+  color: #003308;
 }
 
 .services .service-box.green:hover {
-  background: #08da4e;
+  background: #003308;
 }
 
 .services .service-box.red {
@@ -1309,6 +1309,14 @@ section {
   border: 4px solid #fff;
   margin: 0 auto;
 }
+
+.linhagem-img {
+  width: 180px;
+  border-radius: 10%;
+  border: 4px solid #fff;
+  margin: 0 auto;
+}
+
 
 .testimonials .testimonial-item h3 {
   font-size: 18px;
