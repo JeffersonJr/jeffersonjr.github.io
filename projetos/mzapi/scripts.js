@@ -1,3 +1,9 @@
+// Initialize Lucide icons
+document.addEventListener('DOMContentLoaded', function() {
+    lucide.createIcons();
+    console.log('showPasswordResetScreen disponível:', typeof showPasswordResetScreen);
+});
+
 // Micro-animations for interactive elements
 class MicroAnimations {
     static rotateSunToMoon(element, duration = 600) {
@@ -239,6 +245,43 @@ function showMagicLinkSentScreen(email) {
     document.getElementById('magic-link-sent-screen').classList.remove('hidden');
     document.getElementById('magic-link-email').textContent = email;
     triggerToast('Link enviado!');
+}
+
+function showPasswordResetScreen() {
+    console.log('showPasswordResetScreen chamada');
+    document.querySelectorAll('.screen').forEach(screen => screen.classList.add('hidden'));
+    const resetScreen = document.getElementById('password-reset-screen');
+    console.log('Tela encontrada:', resetScreen);
+    if (resetScreen) {
+        resetScreen.classList.remove('hidden');
+        triggerToast('Redefinir Senha');
+    } else {
+        console.error('Tela password-reset-screen não encontrada');
+    }
+}
+
+function showPasswordResetSentScreen(email) {
+    document.querySelectorAll('.screen').forEach(screen => screen.classList.add('hidden'));
+    document.getElementById('password-reset-sent-screen').classList.remove('hidden');
+    document.getElementById('reset-email-display').textContent = email;
+    triggerToast('E-mail de redefinição enviado!');
+}
+
+function sendPasswordResetEmail() {
+    const email = document.getElementById('reset-email').value;
+    
+    if (!email) {
+        triggerToast('Por favor, digite seu e-mail');
+        return;
+    }
+    
+    // Simulate sending password reset email
+    triggerToast('Enviando e-mail de redefinição...');
+    MicroAnimations.pulse(event.target);
+    
+    setTimeout(() => {
+        showPasswordResetSentScreen(email);
+    }, 1500);
 }
 
 // Login functions
