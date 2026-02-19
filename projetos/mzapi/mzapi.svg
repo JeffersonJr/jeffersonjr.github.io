@@ -1,0 +1,7 @@
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="32" rx="8" fill="#4298B5"/>
+  <path d="M8 8C8 6.89543 8.89543 6 10 6H14C15.1046 6 16 6.89543 16 8V24C16 25.1046 15.1046 26 14 26H10C8.89543 26 8 25.1046 8 24V8Z" fill="white"/>
+  <path d="M20 8C20 6.89543 20.8954 6 22 6H26C27.1046 6 28 6.89543 28 8V24C28 25.1046 27.1046 26 26 26H22C20.8954 26 20 25.1046 20 24V8Z" fill="white" opacity="0.8"/>
+  <path d="M32 8C32 6.89543 32.8954 6 34 6H38C39.1046 6 40 6.89543 40 8V24C40 25.1046 39.1046 26 38 26H34C32.8954 26 32 25.1046 32 24V8Z" fill="white" opacity="0.6"/>
+  <text x="50" y="21" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Mzapi</text>
+</svg>

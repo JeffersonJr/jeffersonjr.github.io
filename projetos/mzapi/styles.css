@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    overflow: hidden; 
+}
+
+.tab-active { 
+    border-bottom: 2px solid #2563eb; 
+    color: #2563eb; 
+    font-weight: 700; 
+}
+
+.custom-scroll::-webkit-scrollbar { 
+    width: 4px; 
+}
+
+.custom-scroll::-webkit-scrollbar-thumb { 
+    background: #cbd5e1; 
+    border-radius: 10px; 
+}
+
+.animate-fade { 
+    animation: fadeIn 0.3s ease-out; 
+}
+
+@keyframes fadeIn { 
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    } 
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+}
+
+/* Modern Theme - Best Practices Implementation */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --text-primary: #000000;
+    --text-secondary: #374151;
+    --text-tertiary: #6b7280;
+    --border-primary: #e5e7eb;
+    --border-secondary: #d1d5db;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --overlay: rgba(255, 255, 255, 0.8);
+    
+    /* Brand colors */
+    --primary-blue: #4298B5;
+    --primary-green: #00C389;
+    --accent-blue: #60a5fa;
+    --accent-green: #34d399;
+}
+
+.dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --border-primary: #334155;
+    --border-secondary: #475569;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+    --overlay: rgba(30, 41, 59, 0.8);
+    
+    /* Brand colors - enhanced for dark mode */
+    --primary-blue: #60a5fa;
+    --primary-green: #4ade80;
+    --accent-blue: #93c5fd;
+    --accent-green: #86efac;
+}
+
+/* Apply CSS Variables - Only override in dark mode */
+/* Let Tailwind handle transitions naturally for light mode */
+
+/* Add transitions only for theme changes */
+.dark body, 
+.bg-white, 
+.bg-slate-50, 
+.text-slate-900, 
+.text-slate-800, 
+.text-slate-600, 
+.text-slate-500, 
+.text-slate-400, 
+.border-slate-200, 
+.border-slate-100, 
+.border-slate-50, 
+.shadow-sm, 
+.shadow-xl, 
+.shadow-2xl {
+    transition: background-color 0.3s ease, 
+               color 0.3s ease, 
+               border-color 0.3s ease, 
+               box-shadow 0.3s ease;
+}
+
+/* Dark mode overrides only */
+.dark .bg-white { background: var(--bg-primary) !important; }
+.dark .bg-slate-50 { background: var(--bg-secondary) !important; }
+.dark .bg-slate-100 { background: var(--bg-tertiary) !important; }
+.dark .bg-slate-900 { background: var(--bg-tertiary) !important; }
+.dark .bg-slate-800 { background: var(--bg-tertiary) !important; }
+.dark .bg-slate-950 { background: var(--bg-primary) !important; }
+
+.dark .text-slate-900 { color: var(--text-primary) !important; }
+.dark .text-slate-800 { color: var(--text-primary) !important; }
+.dark .text-slate-600 { color: var(--text-secondary) !important; }
+.dark .text-slate-500 { color: var(--text-secondary) !important; }
+.dark .text-slate-400 { color: var(--text-tertiary) !important; }
+
+.dark .border-slate-200 { border-color: var(--border-primary) !important; }
+.dark .border-slate-100 { border-color: var(--border-primary) !important; }
+.dark .border-slate-50 { border-color: var(--border-secondary) !important; }
+
+.dark .hover\:bg-slate-50:hover { background: var(--bg-tertiary) !important; }
+.dark .hover\:bg-slate-100:hover { background: var(--bg-tertiary) !important; }
+
+.dark .shadow-sm { box-shadow: var(--shadow-sm) !important; }
+.dark .shadow-xl { box-shadow: var(--shadow-lg) !important; }
+.dark .shadow-2xl { box-shadow: var(--shadow-lg) !important; }
+
+/* Backdrop and overlay elements - Dark mode only */
+.dark .backdrop-blur-md { 
+    backdrop-filter: blur(12px); 
+    background: var(--overlay) !important; 
+}
+
+.dark .bg-white-80, .dark .bg-white-90 { background: var(--overlay) !important; }
+
+/* Form elements - Dark mode only */
+.dark input, .dark textarea, .dark select { 
+    background: var(--bg-secondary) !important; 
+    color: var(--text-primary) !important; 
+    border-color: var(--border-primary) !important; 
+}
+
+/* Special backgrounds with opacity - Dark mode only */
+.dark .bg-slate-50-30 { background: rgba(30, 41, 59, 0.3) !important; }
+.dark .bg-slate-50-50 { background: rgba(30, 41, 59, 0.5) !important; }
+.dark .bg-blue-50-30 { background: rgba(30, 58, 138, 0.3) !important; }
+.dark .bg-blue-50-50 { background: rgba(30, 58, 138, 0.5) !important; }
+.dark .bg-slate-900-50 { background: rgba(15, 23, 42, 0.5) !important; }
+
+/* Blue and Green theme colors - Light mode */
+.text-blue-600 { color: var(--primary-blue) !important; }
+.text-blue-700 { color: var(--primary-blue) !important; }
+.bg-blue-600 { background: var(--primary-blue) !important; }
+.bg-blue-50 { background: rgba(66, 152, 181, 0.1) !important; }
+.bg-blue-100 { background: rgba(66, 152, 181, 0.2) !important; }
+.border-blue-100 { border-color: rgba(66, 152, 181, 0.3) !important; }
+.border-blue-600 { border-color: var(--primary-blue) !important; }
+.hover\:bg-blue-50:hover { background: rgba(66, 152, 181, 0.15) !important; }
+
+/* Green theme colors - Light mode */
+.text-emerald-600 { color: var(--primary-green) !important; }
+.text-green-500 { color: var(--primary-green) !important; }
+.bg-emerald-400 { background: var(--primary-green) !important; }
+.bg-green-500 { background: var(--primary-green) !important; }
+.bg-emerald-50 { background: rgba(0, 195, 137, 0.1) !important; }
+
+/* Dark mode color overrides */
+.dark .text-blue-600 { color: var(--accent-blue) !important; }
+.dark .text-blue-700 { color: var(--accent-blue) !important; }
+.dark .bg-blue-600 { background: var(--accent-blue) !important; }
+.dark .bg-blue-50 { background: rgba(96, 165, 250, 0.2) !important; }
+.dark .bg-blue-100 { background: rgba(96, 165, 250, 0.3) !important; }
+.dark .border-blue-100 { border-color: rgba(96, 165, 250, 0.4) !important; }
+.dark .border-blue-600 { border-color: var(--accent-blue) !important; }
+.dark .hover\:bg-blue-50:hover { background: rgba(96, 165, 250, 0.25) !important; }
+
+.dark .text-emerald-600 { color: var(--accent-green) !important; }
+.dark .text-green-500 { color: var(--accent-green) !important; }
+.dark .bg-emerald-400 { background: var(--accent-green) !important; }
+.dark .bg-green-500 { background: var(--accent-green) !important; }
+.dark .bg-emerald-50 { background: rgba(74, 222, 128, 0.2) !important; }
+
+/* Status colors - Dark mode only */
+.dark .text-purple-600 { color: var(--accent-blue) !important; }
+.dark .text-orange-600 { color: var(--primary-blue) !important; }
+.dark .text-red-400 { color: var(--primary-blue) !important; }
+.dark .text-red-500 { color: var(--primary-blue) !important; }
+.dark .text-purple-500 { color: var(--accent-blue) !important; }
+.dark .text-emerald-400 { color: var(--accent-green) !important; }
+.dark .text-blue-400 { color: var(--accent-blue) !important; }
+.dark .text-orange-400 { color: var(--primary-blue) !important; }
+
+/* Status backgrounds - Dark mode only */
+.dark .bg-emerald-400 { background: var(--accent-green) !important; }
+.dark .bg-purple-500 { background: var(--accent-blue) !important; }
+.dark .bg-orange-600 { background: var(--primary-blue) !important; }
+.dark .bg-green-500 { background: var(--accent-green) !important; }
+.dark .bg-red-500 { background: var(--primary-blue) !important; }
+.dark .bg-blue-400 { background: var(--accent-blue) !important; }
+.dark .bg-purple-600 { background: var(--accent-blue) !important; }
+
+/* Special backgrounds - Dark mode only */
+.dark .bg-red-50 { background: rgba(66, 152, 181, 0.2) !important; }
+.dark .bg-purple-50 { background: rgba(96, 165, 250, 0.2) !important; }
+.dark .bg-emerald-50 { background: rgba(0, 195, 137, 0.2) !important; }
+
+/* Dividers - Dark mode only */
+.dark .divide-slate-50 > * + * { border-color: var(--border-primary) !important; }
+.dark .divide-y > * + * { border-color: var(--border-primary) !important; }
+
+/* Settings tabs styling */
+.settings-tab {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.settings-tab:hover {
+    background-color: rgba(66, 152, 181, 0.05);
+}
+
+.settings-tab.border-b-2 {
+    border-bottom-width: 2px;
+}
+
+/* Tone slider styling */
+#tone-slider {
+    background: linear-gradient(to right, #10b981 0%, #eab308 25%, #4298B5 50%, #8b5cf6 75%, #1e40af 100%);
+}
+
+#tone-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #4298B5;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#tone-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #4298B5;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Tone button colors */
+.border-green-500 { border-color: #10b981 !important; }
+.bg-green-50 { background-color: rgba(16, 185, 129, 0.1) !important; }
+.border-yellow-500 { border-color: #eab308 !important; }
+.bg-yellow-50 { background-color: rgba(234, 179, 8, 0.1) !important; }
+.border-purple-500 { border-color: #8b5cf6 !important; }
+.bg-purple-50 { background-color: rgba(139, 92, 246, 0.1) !important; }
+
+/* Dark mode tone button colors */
+.dark .border-green-500 { border-color: #34d399 !important; }
+.dark .bg-green-50 { background-color: rgba(52, 211, 153, 0.2) !important; }
+.dark .border-yellow-500 { border-color: #facc15 !important; }
+.dark .bg-yellow-50 { background-color: rgba(250, 204, 21, 0.2) !important; }
+.dark .border-purple-500 { border-color: #a78bfa !important; }
+.dark .bg-purple-50 { background-color: rgba(167, 139, 250, 0.2) !important; }
+
+/* Dark mode settings styling */
+.dark .settings-tab:hover {
+    background-color: rgba(96, 165, 250, 0.1);
+}
+
+.dark #tone-slider {
+    background: linear-gradient(to right, #34d399 0%, #60a5fa 50%, #93c5fd 100%);
+}
+
+.dark #tone-slider::-webkit-slider-thumb {
+    border-color: #60a5fa;
+}
+
+.dark #tone-slider::-moz-range-thumb {
+    border-color: #60a5fa;
+}
+
+/* Toggle switches styling */
+input[type="checkbox"]:checked + div {
+    background-color: var(--primary-blue);
+}
+
+.dark input[type="checkbox"]:checked + div {
+    background-color: var(--accent-blue);
+}
+
+/* Images in dark mode - reduce brightness */
+.dark img { 
+    filter: brightness(0.85) contrast(1.1); 
+    transition: filter 0.3s ease;
+}
+
+/* Smooth transitions for all theme changes */
+* { 
+    transition: background-color 0.3s ease, 
+               color 0.3s ease, 
+               border-color 0.3s ease, 
+               box-shadow 0.3s ease;
+}

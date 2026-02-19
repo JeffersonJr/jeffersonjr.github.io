@@ -1,0 +1,256 @@
+<section id="settings-page" class="hidden max-w-4xl mx-auto space-y-8 animate-fade">
+    <!-- Settings Tabs -->
+    <div class="bg-white rounded-3xl border border-slate-200 shadow-sm">
+        <div class="flex border-b border-slate-200">
+            <button onclick="switchSettingsTab('sdr')" class="settings-tab px-6 py-4 font-medium text-sm border-b-2 border-blue-600 text-blue-600" data-tab="sdr">
+                <i data-lucide="brain" class="w-4 h-4 inline mr-2"></i>SDR IA
+            </button>
+            <button onclick="switchSettingsTab('integration')" class="settings-tab px-6 py-4 font-medium text-sm text-slate-600 hover:text-slate-900" data-tab="integration">
+                <i data-lucide="smartphone" class="w-4 h-4 inline mr-2"></i>Integração
+            </button>
+            <button onclick="switchSettingsTab('notifications')" class="settings-tab px-6 py-4 font-medium text-sm text-slate-600 hover:text-slate-900" data-tab="notifications">
+                <i data-lucide="bell" class="w-4 h-4 inline mr-2"></i>Notificações
+            </button>
+            <button onclick="switchSettingsTab('tone')" class="settings-tab px-6 py-4 font-medium text-sm text-slate-600 hover:text-slate-900" data-tab="tone">
+                <i data-lucide="message-circle" class="w-4 h-4 inline mr-2"></i>Tom do Chat
+            </button>
+            <button onclick="switchSettingsTab('profile')" class="settings-tab px-6 py-4 font-medium text-sm text-slate-600 hover:text-slate-900" data-tab="profile">
+                <i data-lucide="user" class="w-4 h-4 inline mr-2"></i>Perfil
+            </button>
+            <button onclick="switchSettingsTab('other')" class="settings-tab px-6 py-4 font-medium text-sm text-slate-600 hover:text-slate-900" data-tab="other">
+                <i data-lucide="more-horizontal" class="w-4 h-4 inline mr-2"></i>Outros
+            </button>
+        </div>
+
+        <!-- SDR IA Tab -->
+        <div id="sdr-tab" class="settings-content p-8">
+            <h4 class="font-bold text-lg text-slate-900 mb-6">Brainstorming do SDR IA</h4>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Instruções para a IA</label>
+                    <textarea id="sdr-instructions" class="w-full p-6 bg-slate-50 border rounded-3xl text-sm h-40 outline-none focus:border-blue-500 transition-colors">Você é um SDR Senior focado em converter leads imobiliários no Tatuapé/SP. Use gatilhos de escassez e seja cordial.</textarea>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Objetivo Principal</label>
+                        <input type="text" placeholder="Ex: Agendar visitas, Qualificar leads, Enviar propostas..." class="w-full p-3 border rounded-xl outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Setor</label>
+                        <input type="text" placeholder="Ex: Imobiliário, Tecnologia, Serviços, Varejo..." class="w-full p-3 border rounded-xl outline-none focus:border-blue-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Integration Tab -->
+        <div id="integration-tab" class="settings-content hidden p-8">
+            <h4 class="font-bold text-lg text-slate-900 mb-6">Integração com WhatsApp</h4>
+            <div class="space-y-6">
+                <div class="p-6 bg-green-50 rounded-2xl border border-green-200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="smartphone" class="w-6 h-6 text-green-600"></i>
+                        <h5 class="font-medium text-slate-900">Conectar WhatsApp</h5>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4">Conecte seu WhatsApp Business para receber e responder leads diretamente pela plataforma</p>
+                    <button onclick="connectWhatsApp()" class="w-full bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 transition-all">
+                        <i data-lucide="qr-code" class="w-4 h-4 inline mr-2"></i>Conectar com QR Code
+                    </button>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl">
+                    <h5 class="font-medium text-slate-900 mb-4">Status da Integração</h5>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-slate-600">WhatsApp Business</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Conectado</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-slate-600">Número Conectado</span>
+                            <span class="text-sm text-slate-600 font-medium">+55 11 99999-9999</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-slate-600">Ações</span>
+                            <button onclick="disconnectWhatsApp()" class="px-3 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full hover:bg-red-200 transition-all">
+                                Desconectar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications Tab -->
+        <div id="notifications-tab" class="settings-content hidden p-8">
+            <h4 class="font-bold text-lg text-slate-900 mb-6">Notificações</h4>
+            <div class="space-y-6">
+                <div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
+                    <div>
+                        <h5 class="font-medium text-slate-900">Novos Leads</h5>
+                        <p class="text-sm text-slate-500">Seja avisado quando novos leads chegarem</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" class="sr-only peer" checked>
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl">
+                    <div>
+                        <h5 class="font-medium text-slate-900">Mensagens de Clientes</h5>
+                        <p class="text-sm text-slate-500">Receba alertas de novas mensagens</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" class="sr-only peer" checked>
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl relative group">
+                    <div>
+                        <h5 class="font-medium text-slate-900">Relatórios Diários</h5>
+                        <p class="text-sm text-slate-500">Resumo das atividades do dia</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">Standard</span>
+                        <div class="relative">
+                            <label class="relative inline-flex items-center cursor-pointer opacity-50">
+                                <input type="checkbox" class="sr-only peer" disabled>
+                                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                            </label>
+                            <!-- Tooltip -->
+                            <div class="absolute right-0 top-8 bg-gray-900 text-white text-xs p-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+                                Faça upgrade de plano para usar
+                                <div class="absolute -top-1 right-4 w-2 h-2 bg-gray-900 transform rotate-45"></div>
+                            </div>
+                            <!-- Click overlay -->
+                            <div onclick="showUpgradeModal()" class="absolute inset-0 cursor-pointer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Tone Tab -->
+        <div id="tone-tab" class="settings-content hidden p-8">
+            <h4 class="font-bold text-lg text-slate-900 mb-6">Tom do Chat</h4>
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-4">Estilo de Comunicação</label>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-slate-600">Amigável</span>
+                        <input type="range" id="tone-slider" min="0" max="100" value="50" class="flex-1 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                        <span class="text-sm text-slate-600">Profissional</span>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <span id="tone-value" class="text-sm font-medium text-blue-600">Equilibrado</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <button onclick="setTone('friendly')" class="p-4 border-2 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all border-slate-200">
+                        <i data-lucide="smile" class="w-6 h-6 text-green-500 mx-auto mb-2"></i>
+                        <p class="text-sm font-medium">Amigável</p>
+                        <p class="text-xs text-slate-500">Informal e descontraído</p>
+                    </button>
+                    <button onclick="setTone('casual')" class="p-4 border-2 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all border-slate-200">
+                        <i data-lucide="coffee" class="w-6 h-6 text-yellow-500 mx-auto mb-2"></i>
+                        <p class="text-sm font-medium">Casual</p>
+                        <p class="text-xs text-slate-500">Relaxado e amigável</p>
+                    </button>
+                    <button onclick="setTone('professional')" class="p-4 border-2 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all border-slate-200">
+                        <i data-lucide="briefcase" class="w-6 h-6 text-blue-500 mx-auto mb-2"></i>
+                        <p class="text-sm font-medium">Profissional</p>
+                        <p class="text-xs text-slate-500">Formal e educado</p>
+                    </button>
+                    <button onclick="setTone('corporate')" class="p-4 border-2 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all border-slate-200">
+                        <i data-lucide="building" class="w-6 h-6 text-purple-500 mx-auto mb-2"></i>
+                        <p class="text-sm font-medium">Corporativo</p>
+                        <p class="text-xs text-slate-500">Muito formal e técnico</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Tab -->
+        <div id="profile-tab" class="settings-content hidden p-8">
+            <h4 class="font-bold text-lg text-slate-900 mb-6">Perfil do Usuário</h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Profile Photo -->
+                <div class="space-y-4">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Foto de Perfil</label>
+                    <div class="flex flex-col items-center">
+                        <div class="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                            <i data-lucide="user" class="w-12 h-12 text-blue-600"></i>
+                        </div>
+                        <button class="px-4 py-2 bg-blue-600 text-white text-sm rounded-xl hover:bg-blue-700 transition-all">
+                            Alterar Foto
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Profile Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Nome Completo</label>
+                        <input type="text" id="profile-name-settings" value="João Silva" class="w-full p-3 border rounded-xl outline-none focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Bio</label>
+                        <textarea id="profile-bio-settings" rows="4" class="w-full p-3 border rounded-xl outline-none focus:border-blue-500">SDR Senior especializado em imobiliário no Tatuapé/SP. Focado em converter leads qualificados.</textarea>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Contatos</label>
+                        <div class="space-y-2">
+                            <div class="flex gap-2">
+                                <input type="tel" placeholder="Telefone" class="flex-1 p-3 border rounded-xl outline-none focus:border-blue-500">
+                                <input type="email" placeholder="E-mail" class="flex-1 p-3 border rounded-xl outline-none focus:border-blue-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Current Plan -->
+            <div class="mt-6 p-4 bg-blue-50 rounded-xl">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h5 class="font-medium text-slate-900">Plano Atual</h5>
+                        <p class="text-sm text-slate-600">Standard</p>
+                    </div>
+                    <button onclick="showPage('plans')" class="px-4 py-2 bg-blue-600 text-white text-sm rounded-xl hover:bg-blue-700 transition-all">
+                        Fazer Upgrade
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Tab -->
+        <div id="other-tab" class="settings-content hidden p-8">
+            <h4 class="font-bold text-lg text-slate-900 mb-6">Outras Configurações</h4>
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Idioma</label>
+                    <select class="w-full p-3 border rounded-xl outline-none focus:border-blue-500">
+                        <option>Português (Brasil)</option>
+                        <option>English</option>
+                        <option>Español</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Fuso Horário</label>
+                    <select class="w-full p-3 border rounded-xl outline-none focus:border-blue-500">
+                        <option>America/Sao_Paulo (GMT-3)</option>
+                        <option>America/New_York (GMT-5)</option>
+                        <option>Europe/London (GMT+0)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save Button -->
+    <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+        <button onclick="saveSettings()" class="w-full bg-blue-600 text-white font-bold py-4 rounded-2xl hover:bg-blue-700 transition-all">
+            Salvar Configurações
+        </button>
+    </div>
+</section>

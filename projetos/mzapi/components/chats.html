@@ -1,0 +1,92 @@
+<section id="chats-page" class="hidden min-h-screen bg-white">
+    <div class="flex h-full">
+        <!-- Sidebar with conversations list -->
+        <aside class="w-80 bg-white border-r border-slate-200 flex flex-col">
+            <div class="p-4 border-b border-slate-100">
+                <h2 class="text-lg font-semibold text-slate-900 mb-4">Conversas</h2>
+                <div class="relative">
+                    <input type="text" placeholder="Buscar conversas..." class="w-full px-4 py-2 border rounded-xl outline-none focus:border-blue-500">
+                    <i data-lucide="search" class="absolute right-3 top-3 w-4 h-4 text-slate-400"></i>
+                </div>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto">
+                <div class="p-4 space-y-3">
+                    <!-- Active Chat -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-2xl p-4">
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">
+                                JS
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900">João Silva</h3>
+                                <p class="text-sm text-slate-600">Cliente interessado em imóvel no Tatuapé</p>
+                                <p class="text-xs text-slate-400">Online agora</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl p-3 mb-3">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-green-500"></div>
+                                <div>
+                                    <p class="text-sm font-medium">IA SDR</p>
+                                    <p class="text-xs text-slate-500">Respondendo...</p>
+                                </div>
+                            </div>
+                            <div class="bg-slate-100 rounded-lg p-3">
+                                <p class="text-sm">Olá João! Vi seu interesse no imóvel na Vila Maria. Temos algumas opções excelentes no Tatuapé que podem ser perfeitas para você.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-2">
+                            <input type="text" placeholder="Digite sua mensagem..." class="flex-1 px-4 py-3 border rounded-xl outline-none focus:border-blue-500">
+                            <button class="px-4 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Conversations -->
+                <div class="space-y-3">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-4 hover:bg-slate-50 cursor-pointer">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-slate-400 flex items-center justify-center text-white font-bold">
+                                MA
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900">Maria Santos</h3>
+                                <p class="text-sm text-slate-600">Consultando sobre apartamento no centro</p>
+                                <p class="text-xs text-slate-400">Última mensagem: há 2 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white border border-slate-200 rounded-2xl p-4 hover:bg-slate-50 cursor-pointer">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-slate-400 flex items-center justify-center text-white font-bold">
+                                RC
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900">Carlos Oliveira</h3>
+                                <p class="text-sm text-slate-600">Solicitando informações sobre financiamento</p>
+                                <p class="text-xs text-slate-400">Última mensagem: há 1 dia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Chat Area -->
+        <main class="flex-1 flex flex-col">
+            <div class="flex-1 flex items-center justify-center bg-slate-50">
+                <div class="text-center">
+                    <i data-lucide="message-circle" class="w-16 h-16 text-slate-300 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-slate-600 mb-2">Selecione uma conversa</h3>
+                    <p class="text-sm text-slate-400">Escolha uma conversa da lista para começar</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</section>
